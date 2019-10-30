@@ -1,1 +1,1 @@
-# RestaurauntApp
+# RestaurantApp
