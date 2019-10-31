@@ -80,3 +80,7 @@ ul#employeetracker-list li {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#step2section {
+  display: none;
+}

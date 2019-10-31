@@ -5,6 +5,7 @@ $(document).ready(function() {
     $("#step1button").addClass("btn-dark");
 
     $("#step1section").css("display", "block");
+    $("#step2section").css("display", "none");
   });
 
   $("#step2button").click(function() {
@@ -13,5 +14,6 @@ $(document).ready(function() {
     $("#step2button").addClass("btn-dark");
 
     $("#step1section").css("display", "none");
+    $("#step2section").css("display", "block");
   });
 });
