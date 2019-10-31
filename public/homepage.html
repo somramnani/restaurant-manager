@@ -13,14 +13,11 @@
       rel="stylesheet"
       href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script
-      src="https://kit.fontawesome.com/3633bd59c9.js"
-      crossorigin="anonymous"
-    ></script>
+
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="homepage-background-image">
+    <div class="homepage-background-image" id="top">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">Restaurant Manager</a>
         <button
@@ -52,45 +49,101 @@
       </nav>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 text-center">
-          <i class="fas fa-users icon"></i>
-          <h4>Employee Tracker</h4>
-          <p>
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable. If you are going to use a passage of
-          </p>
-        </div>
+    <section class="fullpage">
+      <div class="container information-container">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <i class="fas fa-users icon"></i>
+            <h4>Employee Tracker</h4>
 
-        <div class="col-md-4 text-center">
-          <i class="fas fa-phone icon"></i>
-          <h4>Reservations</h4>
-          <p>
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable. If you are going to use a passage of
-          </p>
-        </div>
-        <div class="col-md-4 text-center">
-          <i class="fas fa-calendar-check icon"></i>
-          <h4>Scheduling Application (Coming Soon)</h4>
-          <p>
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable. If you are going to use a passage of
-          </p>
+            <p>
+              An application where employees can import there name, hourly pay
+              and job title so managers can view their employeees
+            </p>
+            <a href="#reservation-section" class="btn btn-dark buttonshadow">
+              MORE INFO
+            </a>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <i class="fas fa-phone icon"></i>
+            <h4>Reservations</h4>
+            <p>
+              Allows customers to book a table which allows managers to see if
+              their Restaurant has any open tables
+            </p>
+            <a href="" class="btn btn-dark buttonshadow">
+              MORE INFO
+            </a>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fas fa-calendar-check icon"></i>
+            <h4>Scheduling Application (Coming Soon)</h4>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly
+            </p>
+            <a href="#reservation-section" class="btn btn-dark buttonshadow">
+              MORE INFO
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- <footer class ="page-footer font-small navbar-dark bg-dark  ">
-      <p class= "text-center">Som Ramnani</p>
-    </footer> -->
+    </section>
+
+    <section class="parrallax1"></section>
+
+    <section class="reservation-section fullpage " id="reservation-section">
+      <div class="text-center">
+        <i class=" fas fa-users icon-sections "></i>
+      </div>
+      <h1 class="text-center employeetrackerheader">Employee Tracker</h1>
+      <ul id="employeetracker-list" class="text-center">
+        <li>
+          <button
+            type="button"
+            id="step1button"
+            class="btn btn-dark buttonshadow"
+          >
+            Step 1
+          </button>
+        </li>
+        <lil>
+          <button
+            type="button"
+            id="step2button"
+            class="btn btn-light  buttonshadow"
+          >
+            Step 2
+          </button>
+        </lil>
+      </ul>
+      <section class="step1section" id="step1section">
+        <div class="container">
+          <div class="text-center">
+            <p>
+              Employees enter their name, hourly pay, and job title.
+            </p>
+            <img src="/step1image" alt="Step 1 Image" />
+          </div>
+        </div>
+      </section>
+
+      <section class="step2section" id="step2section">
+        <div class="text-center">
+          <img src="/step2image" alt="Step 2 Image" />
+        </div>
+      </section>
+    </section>
+
+    <script
+      src="https://kit.fontawesome.com/3633bd59c9.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/logic.js" type="text/javascript"></script>
   </body>
 </html>

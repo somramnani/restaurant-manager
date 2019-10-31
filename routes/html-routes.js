@@ -40,5 +40,13 @@ module.exports = function(app) {
       path.join(__dirname, "../public/images/restaurant-employees.jpg")
     );
   });
+
+  app.get("/step1image", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/images/employee-add.PNG"));
+  });
+
+  app.get("/step2image", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/images/employee-table.PNG"));
+  });
   // ---------------------------------------------------------------------------
 };

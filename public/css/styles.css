@@ -1,3 +1,12 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 button.submit {
   float: right;
 }
@@ -30,4 +39,44 @@ button.edit {
 .icon {
   font-size: 4em;
   padding: 20px;
+}
+.icon-sections {
+  font-size: 4em;
+}
+
+.buttonshadow {
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+}
+ul#employeetracker-list li {
+  display: inline;
+  padding: 40px;
+}
+.employeetrackerheader {
+  padding-top: 20px;
+}
+.fullpage {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.information-container {
+  transform: translateY(50%);
+}
+
+.reservation-section {
+}
+
+.parrallax1 {
+  /* The image used */
+  background-image: url("../images/tables.jpg");
+
+  /* Set a specific height */
+  height: 700px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
