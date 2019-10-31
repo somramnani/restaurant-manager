@@ -26,3 +26,8 @@ button.edit {
   background-image: url("/restaurant-employee");
   width: 100%;
 }
+
+.icon {
+  font-size: 4em;
+  padding: 20px;
+}
