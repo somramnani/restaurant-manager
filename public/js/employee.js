@@ -37,8 +37,7 @@ $(document).ready(function() {
 
   // Getting the initial list of posts
   getPosts();
-  // InitializeRows handles appending all of our constructed post HTML inside
-  // blogContainer
+  // InitializeRows handles appending all of our constructed post HTML inside blogContainer
   function initializeRows() {
     blogContainer.empty();
     var postsToAdd = [];
@@ -87,8 +86,7 @@ $(document).ready(function() {
     return newPostCard;
   }
 
-  // This function figures out which post we want to delete and then calls
-  // deletePost
+  // This function figures out which post we want to delete and then calls deletePost
   function handlePostDelete() {
     var currentPost = $(this)
       .parent()
@@ -97,8 +95,7 @@ $(document).ready(function() {
     deletePost(currentPost.id);
   }
 
-  // This function figures out which post we want to edit and takes it to the
-  // Appropriate url
+  // This function figures out which post we want to edit and takes it to the appropriate url
   function handlePostEdit() {
     var currentPost = $(this)
       .parent()

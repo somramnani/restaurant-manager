@@ -1,17 +1,9 @@
-// *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
-// *********************************************************************************
-
-// Dependencies
-// =============================================================
 var path = require("path");
 
-// Routes
-// =============================================================
 module.exports = function(app) {
-  // Each of the below routes just handles the HTML page that the user gets sent to.
+  // HTML ROUTES
+  // ---------------------------------------------------------------------------
 
-  // index route loads view.html
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/homepage.html"));
   });
@@ -20,18 +12,33 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/cms.html"));
   });
 
-  // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+  app.get("/employees", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/employees.html"));
   });
 
   app.get("/top-restaurant", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/images/top-restauraunt.jpg"));
   });
 
+  app.get("/reservation", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/reservation.html"));
+  });
+
+  app.get("/tables", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/tables.html"));
+  });
+
+  app.get("/reserve", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/reserve.html"));
+  });
+  // ---------------------------------------------------------------------------
+
+  //IMAGE ROUTES
+  // ---------------------------------------------------------------------------
   app.get("/restaurant-employee", function(req, res) {
     res.sendFile(
       path.join(__dirname, "../public/images/restaurant-employees.jpg")
     );
   });
+  // ---------------------------------------------------------------------------
 };
