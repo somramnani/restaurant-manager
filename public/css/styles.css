@@ -53,6 +53,7 @@ ul#employeetracker-list li {
 }
 .employeetrackerheader {
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 .information-fullpage,
 .fullpage {
@@ -60,12 +61,16 @@ ul#employeetracker-list li {
   height: 100%;
   width: 100%;
 }
+.step1text {
+  padding-top: 20px;
+}
 
 .information-container {
   transform: translateY(50%);
 }
 
 .reservation-section {
+  padding-top: 40px;
 }
 
 .parrallax1 {
