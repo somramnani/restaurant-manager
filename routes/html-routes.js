@@ -31,6 +31,9 @@ module.exports = function(app) {
   app.get("/reserve", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/reserve.html"));
   });
+  app.get("/memebers", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/dashboard.html"));
+  });
   // ---------------------------------------------------------------------------
 
   //IMAGE ROUTES

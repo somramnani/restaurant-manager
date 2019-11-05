@@ -54,6 +54,7 @@ ul#employeetracker-list li {
 .employeetrackerheader {
   padding-top: 20px;
 }
+.information-fullpage,
 .fullpage {
   display: block;
   height: 100%;
