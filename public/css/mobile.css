@@ -8,4 +8,15 @@
   .col-md-4 {
     padding-bottom: 4em;
   }
+  .step1image {
+    height: auto;
+    width: 90%;
+    transform: translateY(1em);
+  }
+
+  .step2image {
+    height: auto;
+    width: 90%;
+    transform: translateY(1em);
+  }
 }
