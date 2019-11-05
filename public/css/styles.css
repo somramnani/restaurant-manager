@@ -65,6 +65,17 @@ ul#employeetracker-list li {
   padding-top: 20px;
 }
 
+.panel {
+  background-color: rgba(0, 0, 0, 0.539);
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.login-signup-box {
+  color: white;
+  transform: translate(-30em, 4em);
+}
+
 .information-container {
   transform: translateY(50%);
 }
@@ -89,4 +100,17 @@ ul#employeetracker-list li {
 
 #step2section {
   display: none;
+}
+
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
 }

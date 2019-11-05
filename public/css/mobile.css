@@ -19,4 +19,8 @@
     width: 90%;
     transform: translateY(1em);
   }
+  .login-signup-box {
+    color: white;
+    transform: translate(0em, 2em);
+  }
 }

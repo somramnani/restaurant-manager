@@ -16,4 +16,9 @@ $(document).ready(function() {
     $("#step1section").css("display", "none");
     $("#step2section").css("display", "block");
   });
+
+  $("#signupbutton").click(function() {
+    $(".panel").addClass("flipInY");
+    $(".login-panel").css("display", "none");
+  });
 });
