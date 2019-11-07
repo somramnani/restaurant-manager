@@ -23,4 +23,26 @@
     color: white;
     transform: translate(0em, 2em);
   }
+  .box-container {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .box2 {
+    transform: translateY(1em);
+  }
+  .box3 {
+    transform: translateY(2em);
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }

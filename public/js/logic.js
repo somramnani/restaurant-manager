@@ -76,6 +76,7 @@ $(document).ready(function() {
 
   // Getting the initial list of posts
   getPosts();
+
   // InitializeRows handles appending all of our constructed post HTML inside blogContainer
   function initializeRows() {
     blogContainer.empty();
@@ -84,6 +85,7 @@ $(document).ready(function() {
       postsToAdd.push(createNewRow(posts[i]));
     }
     blogContainer.append(postsToAdd);
+    $("#numberofemployees").text(posts.length);
   }
 
   // This function constructs a post's HTML
@@ -125,7 +127,7 @@ $(document).ready(function() {
     return newPostCard;
   }
 
-  // This function figures out which post we want to delete and then calls deletePost
+  // This function figures out which post to delete and then calls deletePost
   function handlePostDelete() {
     var currentPost = $(this)
       .parent()
@@ -134,7 +136,7 @@ $(document).ready(function() {
     deletePost(currentPost.id);
   }
 
-  // This function figures out which post we want to edit and takes it to the appropriate url
+  // This function figures out which post to edit and takes it to the appropriate url
   function handlePostEdit() {
     var currentPost = $(this)
       .parent()
@@ -149,7 +151,7 @@ $(document).ready(function() {
     var messageH2 = $("<h2>");
     messageH2.css({ "text-align": "center", "margin-top": "50px" });
     messageH2.html(
-      "No employees yet for this job, navigate <a href='/cms'>here</a> in order to create a new emlployee."
+      "No employees yet for this job, navigate <a href='/cms'>here</a> in order to create a new employee."
     );
     blogContainer.append(messageH2);
   }

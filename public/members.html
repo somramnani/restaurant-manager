@@ -34,16 +34,18 @@
     <!------------------------------------------------------------------------------------------>
     <!-- MY STYLESHEET -->
     <!------------------------------------------------------------------------------------------>
-    <link href="stylesheets/style.css" rel="stylesheet" />
+    <link href="stylesheets/styles.css" rel="stylesheet" />
+    <link href="stylesheets/mobile.css" rel="stylesheet" />
     <!------------------------------------------------------------------------------------------>
   </head>
 
-  <body>
+  <body class="memebersbody">
     <!------------------------------------------------------------------------------------------>
     <!-- NAVBAR -->
     <!------------------------------------------------------------------------------------------>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">Restaurant Manager</a>
+      <a class="navbar-brand" href="">Restaurant Manager</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -57,6 +59,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/members">Dashboard</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="/employees">Employees</a>
           </li>
@@ -77,27 +82,41 @@
         </ul>
       </div>
     </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h2>Welcome <span class="member-name"></span></h2>
+
+    <!------------------------------------------------------------------------------------------>
+    <!-- SIDE NAVBAR -->
+    <!------------------------------------------------------------------------------------------>
+    <!-- <div class="sidenav">
+      <a href="#" class="active">Summary</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div> -->
+    <!------------------------------------------------------------------------------------------>
+    <div class="container text-center box-container">
+      <div class="row ">
+        <div class="col-md-4 box">
+          <div class="">
+            <p>Number of employees</p>
+            <h3 class="text-center" id="numberofemployees"></h3>
+          </div>
+        </div>
+        <div class="col-md-4 box2 box">
+          <p>Number of open tables</p>
+        </div>
+        <div class="col-md-4 box3 box">
+          <p>Number of waitlisted tables</p>
         </div>
       </div>
     </div>
-    <!------------------------------------------------------------------------------------------>
 
     <!------------------------------------------------------------------------------------------>
     <!-- JAVASCRIPT FILES -->
     <!------------------------------------------------------------------------------------------>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.js"
-      integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/members.js"></script>
+    <script type="text/javascript" src="js/logic.js"></script>
     <!------------------------------------------------------------------------------------------>
   </body>
 </html>
