@@ -1,42 +1,43 @@
 var path = require("path");
 
+// Requiring our custom middleware for checking if a user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+//
 module.exports = function(app) {
+  // ---------------------------------------------------------------------------
   // HTML ROUTES
   // ---------------------------------------------------------------------------
-
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/homepage.html"));
+    // If the user already has an account send them to the members page
+    // if (req.user) {
+    //   res.redirect("/members");
+    // }
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
-  app.get("/cms", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/cms.html"));
+  app.get("/signup", function(req, res) {
+    // If the user already has an account send them to the members page
+    // if (req.user) {
+    //   res.redirect("/members");
+    // }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
-  app.get("/employees", function(req, res) {
+  app.get("/members", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/members.html"));
+  });
+
+  app.get("/employees", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/employees.html"));
   });
 
-  app.get("/top-restaurant", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/images/top-restauraunt.jpg"));
-  });
-
-  app.get("/reservation", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/reservation.html"));
-  });
-
-  app.get("/tables", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/tables.html"));
-  });
-
-  app.get("/reserve", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/reserve.html"));
-  });
-  app.get("/memebers", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/dashboard.html"));
+  app.get("/cms", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/cms.html"));
   });
   // ---------------------------------------------------------------------------
 
-  //IMAGE ROUTES
+  // ---------------------------------------------------------------------------
+  // IMAGE ROUTES
   // ---------------------------------------------------------------------------
   app.get("/restaurant-employee", function(req, res) {
     res.sendFile(

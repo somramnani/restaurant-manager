@@ -1,24 +1,28 @@
 var express = require("express");
+var bodyParser = require("body-parser");
+var session = require("express-session");
 
-var app = express();
-var PORT = process.env.PORT || 3000;
+var passport = require("./config/passport");
 
+var PORT = process.env.PORT || 8080;
 var db = require("./models");
 
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
+var app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static("public"));
 
-// Routes
-// =============================================================
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
-// Syncing sequelize models and then starting the app
-db.sequelize.sync({ force: true }).then(function() {
+require("./routes/api-routes")(app);
+require("./routes/html-routes")(app);
+
+
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
   });
 });

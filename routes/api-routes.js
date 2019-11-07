@@ -1,19 +1,14 @@
 var db = require("../models");
-var tableData = require("../data/tableData");
-var waitListData = require("../data/waitinglistData");
 var passport = require("../config/passport");
-
+//
 module.exports = function(app) {
+  // ---------------------------------------------------------------------------
   // LOGIN/SIGNUP API ROTUES
   // ---------------------------------------------------------------------------
-
-  // If the user has valid login credentials, send them to the members page.
-  // Otherwise the user will be sent an error
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     res.json("/members");
   });
 
-  //If the user is created successfully, proceed to log the user in, otherwise send back an error
   app.post("/api/signup", function(req, res) {
     console.log(req.body);
     db.User.create({
@@ -29,16 +24,13 @@ module.exports = function(app) {
       });
   });
 
-  // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/");
   });
 
-  // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
-      // The user is not logged in, send back an empty object
       res.json({});
     } else {
       res.json({
@@ -49,9 +41,9 @@ module.exports = function(app) {
   });
   // ---------------------------------------------------------------------------
 
+  // ---------------------------------------------------------------------------
   // EMPLOYEES PAGE API ROTUES
   // ---------------------------------------------------------------------------
-
   // GET route for getting all of the posts
   app.get("/api/posts/", function(req, res) {
     db.Post.findAll({}).then(function(dbPost) {
@@ -113,34 +105,6 @@ module.exports = function(app) {
     }).then(function(dbPost) {
       res.json(dbPost);
     });
-  });
-  // ---------------------------------------------------------------------------
-
-  // RESERVATION API ROUTES
-  // ---------------------------------------------------------------------------
-  app.get("/api/tables", function(req, res) {
-    res.json(tableData);
-  });
-
-  app.get("/api/waitlist", function(req, res) {
-    res.json(waitListData);
-  });
-
-  app.post("/api/tables", function(req, res) {
-    if (tableData.length < 5) {
-      tableData.push(req.body);
-      res.json(true);
-    } else {
-      waitListData.push(req.body);
-      res.json(false);
-    }
-  });
-
-  app.post("/api/clear", function(req, res) {
-    // Empty out the arrays of data
-    tableData.length = 0;
-    waitListData.length = 0;
-    res.json({ ok: true });
   });
   // ---------------------------------------------------------------------------
 };

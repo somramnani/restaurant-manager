@@ -55,6 +55,7 @@ ul#employeetracker-list li {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 .information-fullpage,
 .fullpage {
   display: block;
@@ -113,4 +114,8 @@ ul#employeetracker-list li {
   -ms-animation-duration: 2s;
   -o-animation-duration: 2s;
   animation-duration: 2s;
+}
+
+.signup-panel {
+  display: none;
 }

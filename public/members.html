@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Restaurant Manager | Dashboard</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Restaurant Manager | Employees</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!------------------------------------------------------------------------------------------>
-    <!-- BOOTSTRAP CDN-->
+    <!-- BOOTSTRAP CDN -->
     <!------------------------------------------------------------------------------------------>
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -14,7 +13,8 @@
     />
     <!------------------------------------------------------------------------------------------>
 
-    <!-- FONT-AWESOME CDN-->
+    <!------------------------------------------------------------------------------------------>
+    <!--FONT AWESOME CDN  -->
     <!------------------------------------------------------------------------------------------>
     <link
       rel="stylesheet"
@@ -23,7 +23,7 @@
     <!------------------------------------------------------------------------------------------>
 
     <!------------------------------------------------------------------------------------------>
-    <!-- Animate CSS Link -->
+    <!-- ANIMATE CDN -->
     <!------------------------------------------------------------------------------------------>
     <link
       rel="stylesheet"
@@ -32,12 +32,12 @@
     <!------------------------------------------------------------------------------------------>
 
     <!------------------------------------------------------------------------------------------>
-    <!-- STYLESHEETS -->
+    <!-- MY STYLESHEET -->
     <!------------------------------------------------------------------------------------------>
-    <link rel="stylesheet" href="stylesheets/styles.css" />
-    <link rel="stylesheet" href="stylesheets/mobile.css" />
+    <link href="stylesheets/style.css" rel="stylesheet" />
     <!------------------------------------------------------------------------------------------>
   </head>
+
   <body>
     <!------------------------------------------------------------------------------------------>
     <!-- NAVBAR -->
@@ -58,7 +58,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="/employees">Employees</a>
+            <a class="nav-link" href="/employees">Employees</a>
           </li>
 
           <li class="nav-item">
@@ -77,27 +77,11 @@
         </ul>
       </div>
     </nav>
-
     <div class="container">
-      <div class="row mt-4">
-        <div class="col-md-4">
-          <div class="form-group">
-            <select class="custom-select" id="category">
-              <option selected value="">All Employees</option>
-              <option value="Chef">Chef</option>
-              <option value="Manager">Manager</option>
-              <option value="Cook">Cook</option>
-              <option value="Waiter">Waiter</option>
-              <option value="Hostess">Hostess</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <a class="btn btn-light" href="/cms">New Employee</a>
-        </div>
-      </div>
       <div class="row">
-        <div class="col-md-12 blog-container"></div>
+        <div class="col-md-6 col-md-offset-3">
+          <h2>Welcome <span class="member-name"></span></h2>
+        </div>
       </div>
     </div>
     <!------------------------------------------------------------------------------------------>
@@ -113,7 +97,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/logic.js"></script>
+    <script type="text/javascript" src="js/members.js"></script>
     <!------------------------------------------------------------------------------------------>
   </body>
 </html>
