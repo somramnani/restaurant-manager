@@ -253,7 +253,7 @@ $(document).ready(function() {
 // ---------------------------------------------------------------------------
 
 var managerCount = 0;
-var chefCount = 0;
+
 var cookCount = 0;
 var waiterCount = 0;
 var hostessCount = 0;
@@ -267,8 +267,6 @@ $.ajax({
 
     if (profession === "Manager") {
       managerCount++;
-    } else if (profession === "Chef") {
-      chefCount++;
     } else if (profession === "Cook") {
       cookCount++;
     } else if (profession === "Waiter") {
@@ -288,7 +286,6 @@ function drawChart() {
   var data = google.visualization.arrayToDataTable([
     ["Profession", "Number of employees in that profession"],
     ["Manager", managerCount],
-    ["Chef", chefCount],
     ["Cook", cookCount],
     ["Waiter", waiterCount],
     ["Hostess", hostessCount]
