@@ -55,6 +55,7 @@ $(document).ready(function() {
     }
     $.get("/api/posts" + categoryString, function(data) {
       console.log("Posts", data);
+
       posts = data;
       if (!posts || !posts.length) {
         displayEmpty();
@@ -245,4 +246,64 @@ $(document).ready(function() {
     });
   }
 });
+// ---------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------
+// MEMBERS PAGE
+// ---------------------------------------------------------------------------
+
+var managerCount = 0;
+var chefCount = 0;
+var cookCount = 0;
+var waiterCount = 0;
+var hostessCount = 0;
+
+$.ajax({
+  url: "/api/posts/",
+  method: "GET"
+}).then(function(response) {
+  for (let i = 0; i < response.length; i++) {
+    var profession = response[i].category;
+
+    if (profession === "Manager") {
+      managerCount++;
+    } else if (profession === "Chef") {
+      chefCount++;
+    } else if (profession === "Cook") {
+      cookCount++;
+    } else if (profession === "Waiter") {
+      waiterCount++;
+    } else if (profession === "Hostess") {
+      hostessCount++;
+    }
+  }
+});
+console.log("Manager:" + managerCount);
+
+// Google Pie Chart
+google.charts.load("current", { packages: ["corechart"] });
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ["Profession", "Number of employees in that profession"],
+    ["Manager", managerCount],
+    ["Chef", chefCount],
+    ["Cook", cookCount],
+    ["Waiter", waiterCount],
+    ["Hostess", hostessCount]
+  ]);
+
+  var options = {
+    title: "Employees",
+    backgroundColor: "#f5f5f5",
+    is3D: true
+  };
+
+  var chart = new google.visualization.PieChart(
+    document.getElementById("piechart_3d")
+  );
+
+  chart.draw(data, options);
+}
 // ---------------------------------------------------------------------------
