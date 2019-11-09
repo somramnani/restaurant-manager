@@ -42,19 +42,8 @@
   }
   .blog-container {
     margin: auto;
-    width: 50%;
+    width: 65%;
     padding-bottom: 10px;
-  }
-
-  .delete {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    text-align: center;
-
-    align-items: center;
   }
 }
 
