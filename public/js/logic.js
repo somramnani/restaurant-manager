@@ -92,18 +92,18 @@ $(document).ready(function() {
   // This function constructs a post's HTML
   function createNewRow(post) {
     var newPostCard = $("<div>");
-    newPostCard.addClass("card");
+    newPostCard.addClass("card col-md-4 employee-cards");
     var newPostCardHeading = $("<div>");
     newPostCardHeading.addClass("card-header");
     var deleteBtn = $("<button>");
-    deleteBtn.text("x");
+    deleteBtn.text("X");
     deleteBtn.addClass("delete btn btn-danger");
     var editBtn = $("<button>");
     editBtn.text("EDIT");
     editBtn.addClass("edit btn btn-default");
     var newPostTitle = $("<h2>");
     var newPostDate = $("<small>");
-    var newPostCategory = $("<h5>");
+    var newPostCategory = $("<h6>");
     newPostCategory.text("Profession: " + post.category);
     newPostCategory.css({});
     var newPostCardBody = $("<div>");
@@ -120,8 +120,8 @@ $(document).ready(function() {
     newPostCardHeading.append(newPostTitle);
     newPostCardHeading.append(newPostCategory);
     newPostCardBody.append(newPostTitle);
-    newPostCardBody.append(newPostBody);
     newPostCardBody.append(newPostCategory);
+    newPostCardBody.append(newPostBody);
     newPostCard.append(newPostCardHeading);
     newPostCard.append(newPostCardBody);
     newPostCard.data("post", post);

@@ -178,3 +178,12 @@ ul#employeetracker-list li {
 #piechart {
   background-color: #f5f5f5;
 }
+.employee-cards {
+  margin: 5px;
+
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.blog-container {
+  display: flex;
+  justify-content: center;
+}
