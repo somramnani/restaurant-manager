@@ -5,7 +5,7 @@
   .information-fullpage {
     padding-bottom: 70em;
   }
-  .col-md-4 {
+  .box {
     padding-bottom: 4em;
   }
   .step1image {
@@ -28,7 +28,6 @@
     width: 50%;
     padding: 10px;
   }
-
   .box2 {
     transform: translateY(1em);
   }
@@ -40,6 +39,22 @@
   .box4 {
     transform: translateY(4em);
     height: 200px;
+  }
+  .blog-container {
+    margin: auto;
+    width: 50%;
+    padding-bottom: 10px;
+  }
+
+  .delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    align-items: center;
   }
 }
 
