@@ -278,7 +278,7 @@ $.ajax({
     }
   }
 });
-let openTables = 0;
+let openTables = 5;
 let closedTables = 0;
 
 $.ajax({ url: "/api/tables", method: "GET" }).then(function(tableData) {
@@ -286,10 +286,10 @@ $.ajax({ url: "/api/tables", method: "GET" }).then(function(tableData) {
   for (var i = 0; i < tableData.length; i++) {
     closedTables = tableData.length;
     openTables = 5 - closedTables;
-
     $("#numberoftables").text(openTables);
   }
 });
+$("#numberoftables").text(openTables);
 
 $.ajax({ url: "/api/waitlist", method: "GET" }).then(function(waitData) {
   // Loop through and display each of the customers
@@ -297,7 +297,6 @@ $.ajax({ url: "/api/waitlist", method: "GET" }).then(function(waitData) {
     $("#numberofwaitlistedtables").text(waitData.length);
   }
 });
-console.log(openTables);
 
 //Employees Table
 google.charts.load("current", { packages: ["table"] });
