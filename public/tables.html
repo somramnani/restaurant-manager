@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Restaurant Manager | Employees</title>
+    <title>Restaurant Manager | Tables</title>
     <!------------------------------------------------------------------------------------------>
     <!-- BOOTSTRAP CDN-->
     <!------------------------------------------------------------------------------------------>
@@ -61,9 +61,10 @@
             <a class="nav-link" href="/members">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/employees">Employees</a>
+            <a class="nav-link " href="/employees">Employees</a>
           </li>
-          <li class="nav-item dropdown">
+
+          <li class="nav-item active dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -76,56 +77,74 @@
               Reservations
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/tables">Book a Table</a>
+              <a class="dropdown-item active" href="/tables">View Tables</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/reserve"> View Tables</a>
+              <a class="dropdown-item " href="/reserve">Book a Table </a>
             </div>
           </li>
+
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Scheduling</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item ">
-            <a class="nav-link " href="/logout">Logout</a>
+            <a class="nav-link" href="/logout">Logout</a>
           </li>
         </ul>
       </div>
     </nav>
     <!------------------------------------------------------------------------------------------>
 
-    <!------------------------------------------------------------------------------------------>
-    <!-- Add an Employee -->
-    <!------------------------------------------------------------------------------------------>
-    <div class="container addemployecontainer text-center">
-      <div class="row ">
-        <div class="col-md-4">
-          <div class="form-group">
-            <select class="custom-select" id="category">
-              <option selected value="">All Employees</option>
-              <option value="Manager">Manager</option>
-              <option value="Cook">Cook</option>
-              <option value="Waiter">Waiter</option>
-              <option value="Hostess">Hostess</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <a class="btn btn-dark new-employee-button" href="/cms"
-            >New Employee</a
+    <div class="container">
+      <div class="jumbotron">
+        <h2 class="text-center">Current Reservations and Waiting List</h2>
+        <br />
+
+        <div class="text-center">
+          <a href="/reserve"
+            ><button class="btn btn-lg btn-danger">
+              <span class="fa fa-credit-card"></span> Make Reservation
+            </button></a
           >
         </div>
       </div>
-    </div>
-    <!------------------------------------------------------------------------------------------>
 
-    <!------------------------------------------------------------------------------------------>
-    <!-- Employees Section -->
-    <!------------------------------------------------------------------------------------------>
-    <div class="container">
-      <div class="row blog-container"></div>
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Current Tables in Use -->
+          <div class="card">
+            <div class="card-header">
+              <h4>Current Reservations</h4>
+            </div>
+            <div class="card-body">
+              <ul id="tableList" class="list-group"></ul>
+            </div>
+          </div>
+
+          <!-- Waiting List Card -->
+          <div class="card mt-4">
+            <div class="card-header">
+              <h4>Waiting List</h4>
+            </div>
+            <div class="card-body">
+              <ul id="waitList" class="list-group"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer mt-4">
+        <div class="container">
+          <h6>Control Panel</h6>
+          <p>
+            <a href="#" id="clear">Clear Table</a> |
+            <a href="/api/tables">API Table Link</a> |
+            <a href="/api/waitlist">API Wait List</a>
+          </p>
+        </div>
+      </footer>
     </div>
-    <!------------------------------------------------------------------------------------------>
 
     <!------------------------------------------------------------------------------------------>
     <!-- JAVASCRIPT FILES -->
@@ -133,7 +152,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/logic.js"></script>
+    <script type="text/javascript" src="js/reservation.js"></script>
     <!------------------------------------------------------------------------------------------>
   </body>
 </html>

@@ -38,7 +38,16 @@
 
   .box4 {
     transform: translateY(4em);
+    height: 400px;
+    width: 250;
+  }
+  .box5 {
+    transform: translate(0em, 5em);
     height: 200px;
+  }
+
+  #piechart_3d {
+    width: 300px;
   }
   .blog-container {
     margin: auto;

@@ -65,19 +65,31 @@
           <li class="nav-item">
             <a class="nav-link" href="/employees">Employees</a>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Reservations</a>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Reservations
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/tables">Book a Table</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/reserve"> View Tables</a>
+            </div>
           </li>
-
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Scheduling</a>
           </li>
         </ul>
-
         <ul class="navbar-nav ml-auto">
           <li class="nav-item ">
-            <a class="nav-link disabled" href="/logout">Logout</a>
+            <a class="nav-link" href="/logout">Logout</a>
           </li>
         </ul>
       </div>
@@ -103,19 +115,22 @@
         </div>
         <div class="col-md-4 box2 box">
           <p>Number of open tables</p>
+          <h3 class="text-center" id="numberoftables"></h3>
         </div>
         <div class="col-md-4 box3 box">
           <p>Number of waitlisted tables</p>
+          <h3 class="text-center" id="numberofwaitlistedtables"></h3>
         </div>
       </div>
+
       <div class="row row2">
         <div
           class="col-md-6 box4 "
-          id="piechart_3d"
+          id="table_div"
           style="background-color: #f5f5f5;"
-        >
-          <div></div>
-        </div>
+        ></div>
+
+        <div class="col-md-6 box5 " id="piechart_3d"></div>
       </div>
     </div>
 

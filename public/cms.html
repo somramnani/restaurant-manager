@@ -65,10 +65,25 @@
             <a class="nav-link active" href="/employees">Employees</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">Reservations</a>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Reservations
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/tables">Book a Table</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/reserve"> View Tables</a>
+            </div>
           </li>
-
+          
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Scheduling</a>
           </li>

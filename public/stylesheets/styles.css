@@ -170,24 +170,28 @@ ul#employeetracker-list li {
   transform: translateX(6em);
 }
 
-.box4 {
+.box4,
+.box5 {
   background-color: #f5f5f5;
-
   width: 300px;
-  height: 350px;
-
+  height: 400px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.box5 {
+  transform: translateX(6em);
 }
 
 .row2 {
   padding-top: 20px;
 }
-#piechart {
-  background-color: #f5f5f5;
-}
+
 .employee-cards {
   margin: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
 
+.card {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .blog-container {
@@ -202,4 +206,3 @@ ul#employeetracker-list li {
 .new-employee-button {
   box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
 }
-

@@ -35,6 +35,11 @@ $(document).ready(function() {
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
+// MEMBERS PAGE
+// ---------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // EMPLOYEE PAGE
 // ---------------------------------------------------------------------------
 $(document).ready(function() {
@@ -169,10 +174,8 @@ $(document).ready(function() {
 // CMS PAGE
 // ---------------------------------------------------------------------------
 $(document).ready(function() {
-  // Gets an optional query string from our url (i.e. ?post_id=23)
   var url = window.location.search;
   var postId;
-
   // Sets a flag for whether or not the post the post is updating
   var updating = false;
 
@@ -253,7 +256,6 @@ $(document).ready(function() {
 // ---------------------------------------------------------------------------
 
 var managerCount = 0;
-
 var cookCount = 0;
 var waiterCount = 0;
 var hostessCount = 0;
@@ -276,23 +278,62 @@ $.ajax({
     }
   }
 });
-console.log("Manager:" + managerCount);
+let openTables = 0;
+let closedTables = 0;
 
-// Google Pie Chart
+$.ajax({ url: "/api/tables", method: "GET" }).then(function(tableData) {
+  // Loop through and display each of the customers
+  for (var i = 0; i < tableData.length; i++) {
+    closedTables = tableData.length;
+    openTables = 5 - closedTables;
+
+    $("#numberoftables").text(openTables);
+  }
+});
+
+$.ajax({ url: "/api/waitlist", method: "GET" }).then(function(waitData) {
+  // Loop through and display each of the customers
+  for (var i = 0; i < waitData.length; i++) {
+    $("#numberofwaitlistedtables").text(waitData.length);
+  }
+});
+console.log(openTables);
+
+//Employees Table
+google.charts.load("current", { packages: ["table"] });
+google.charts.setOnLoadCallback(drawTable);
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart);
 
+function drawTable() {
+  var data = new google.visualization.DataTable();
+  data.addColumn("string", "Profession");
+  data.addColumn("number", "Salary (per hour)");
+  data.addColumn("number", "Number of Employees");
+
+  data.addRows([
+    ["Manager", { v: 22, f: "$21" }, { v: managerCount }],
+    ["Cook", { v: 20, f: "$20" }, { v: cookCount }],
+    ["Waiter/Waitress", { v: 10, f: "$10" }, { v: waiterCount }],
+    ["Host/Hostess", { v: 7000, f: "$11" }, { v: hostessCount }]
+  ]);
+
+  var table = new google.visualization.Table(
+    document.getElementById("table_div")
+  );
+
+  table.draw(data, { showRowNumber: true, width: "100%", height: "100%" });
+}
+// Google Pie Chart
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
-    ["Profession", "Number of employees in that profession"],
-    ["Manager", managerCount],
-    ["Cook", cookCount],
-    ["Waiter", waiterCount],
-    ["Hostess", hostessCount]
+    ["Tables", "Number of tables"],
+    ["Open Tables", openTables],
+    ["Closed Tables", closedTables]
   ]);
 
   var options = {
-    title: "Employees",
+    title: "Tables",
     backgroundColor: "#f5f5f5",
     is3D: true
   };
