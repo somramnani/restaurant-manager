@@ -286,10 +286,9 @@ $.ajax({ url: "/api/tables", method: "GET" }).then(function(tableData) {
   for (var i = 0; i < tableData.length; i++) {
     closedTables = tableData.length;
     openTables = 5 - closedTables;
-    $("#numberoftables").text(openTables);
   }
+  $("#numberoftables").text(openTables);
 });
-$("#numberoftables").text(openTables);
 
 $.ajax({ url: "/api/waitlist", method: "GET" }).then(function(waitData) {
   // Loop through and display each of the customers
