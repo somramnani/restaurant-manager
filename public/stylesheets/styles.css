@@ -63,10 +63,14 @@ ul#employeetracker-list li {
   padding-bottom: 20px;
 }
 
-.information-fullpage,
-.fullpage {
+.information-fullpage {
   display: block;
   height: 100%;
+  width: 100%;
+}
+.fullpage {
+  display: block;
+  height: 120%;
   width: 100%;
 }
 .step1text {
@@ -88,15 +92,27 @@ ul#employeetracker-list li {
   transform: translateY(50%);
 }
 
+.employees-section {
+  padding-top: 40px;
+}
 .reservation-section {
   padding-top: 40px;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .parrallax1 {
-  /* The image used */
   background-image: url("../images/tables.jpg");
-
-  /* Set a specific height */
+  height: 700px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parrallax2 {
+  background-image: url("../images/top-restauraunt.jpg");
   height: 700px;
 
   /* Create the parallax scrolling effect */

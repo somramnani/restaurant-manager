@@ -23,12 +23,14 @@ $(".submit").on("click", function(event) {
   $.post("/api/tables", newReservation, function(data) {
     // If a table is available, tell user they are booked.
     if (data) {
-      alert("Yay! You are officially booked!");
+      alert("You have booked a table");
+      window.location.href = "/tables";
     }
 
     // If a table is available, tell user they on the waiting list.
     else {
       alert("Sorry you are on the wait list");
+      window.location.href = "/tables";
     }
 
     // Clear the form when submitting
@@ -88,7 +90,6 @@ function runWaitListQuery() {
       listItem.append(
         $("<h2>").text("Table #" + (i + 1)),
         $("<hr>"),
-
         $("<h2>").text("Name: " + waitData[i].customerName),
         $("<h2>").text("Email: " + waitData[i].customerEmail),
         $("<h2>").text("Phone: " + waitData[i].phoneNumber)
