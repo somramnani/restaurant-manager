@@ -9,6 +9,8 @@ $(document).ready(function() {
 
     $("#step1section").css("display", "block");
     $("#step2section").css("display", "none");
+
+    $("#step1section").addClass("animated zoomIn");
   });
 
   $("#step2button").click(function() {
@@ -18,6 +20,8 @@ $(document).ready(function() {
 
     $("#step1section").css("display", "none");
     $("#step2section").css("display", "block");
+
+    $("#step2section").addClass("animated zoomIn");
   });
 
   $("#signupbutton").click(function() {
