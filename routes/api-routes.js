@@ -3,7 +3,7 @@ var passport = require("../config/passport");
 var tableData = require("../data/tableData");
 var waitListData = require("../data/waitinglistData");
 const accountSid = "AC0cd1dd92db1f221da9dcf8d41dcc2311";
-const authToken = "f64d5b82464a4a21a9dc6743e66adc84";
+const authToken = "5011d4d126b7c208206faa6abed97707";
 
 const client = require("twilio")(accountSid, authToken);
 
@@ -134,7 +134,8 @@ module.exports = function(app) {
       client.messages.create({
         to: "+14089609932",
         from: "+12056279983",
-        body: "Hello Som, A table has been booked "
+        body: `Hello Manager, A table has been booked. You have ${5 -
+          tableData.length} tables left `
       });
     } else {
       waitListData.push(req.body);
