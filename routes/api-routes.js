@@ -1,9 +1,10 @@
+require("dotenv").config();
 var db = require("../models");
 var passport = require("../config/passport");
 var tableData = require("../data/tableData");
 var waitListData = require("../data/waitinglistData");
-const accountSid = "";
-const authToken = "";
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 
 const client = require("twilio")(accountSid, authToken);
 
