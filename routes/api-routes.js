@@ -2,6 +2,11 @@ var db = require("../models");
 var passport = require("../config/passport");
 var tableData = require("../data/tableData");
 var waitListData = require("../data/waitinglistData");
+const accountSid = "AC0cd1dd92db1f221da9dcf8d41dcc2311";
+const authToken = "f64d5b82464a4a21a9dc6743e66adc84";
+
+const client = require("twilio")(accountSid, authToken);
+
 //
 module.exports = function(app) {
   // ---------------------------------------------------------------------------
@@ -122,17 +127,21 @@ module.exports = function(app) {
     res.json(waitListData);
   });
 
-
   app.post("/api/tables", function(req, res) {
     if (tableData.length < 5) {
       tableData.push(req.body);
       res.json(true);
+      client.messages.create({
+        to: "+14089609932",
+        from: "+12056279983",
+        body: "Hello Som, A table has been booked "
+      });
     } else {
       waitListData.push(req.body);
       res.json(false);
     }
   });
- 
+
   app.post("/api/clear", function(req, res) {
     // Empty out the arrays of data
     tableData.length = 0;
