@@ -6,9 +6,13 @@ An application where managers can track their employees. Users can import there 
 - CSS3
 - Bootstrap
 - JavaScript
-- JQuery
+  - Node.js
 - Express.js
+  - JQuery
 - Passport
-
+- REST API
+  - Twilio API
+- Test Driven Development
+  - Jasmine
 
   
