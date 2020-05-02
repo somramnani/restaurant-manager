@@ -7,7 +7,7 @@ An application where managers can track their employees. Users can import there 
 - Bootstrap
 - JavaScript
   - Node.js
-- Express.js
+  - Express.js
   - JQuery
 - Passport
 - REST API
