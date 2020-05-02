@@ -5,6 +5,7 @@ An application where managers can track their employees. Users can import there 
 - HTML5
 - CSS3
 - JavaScript
+  - jQuery
   - Node.js
   -Express.js
   - Sequelize
