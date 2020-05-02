@@ -4,6 +4,7 @@ An application where managers can track their employees. Users can import there 
 ## Tools / Languages Used
 - HTML5
 - CSS3
+- Bootstrap
 - JavaScript
   - jQuery
   - Node.js
