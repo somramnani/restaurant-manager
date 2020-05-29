@@ -222,3 +222,24 @@ ul#employeetracker-list li {
 .new-employee-button {
   box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
 }
+
+.reservationImage {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/tables-reservation.jpg") no-repeat center center;
+  background-size: 100%;
+}
+
+.reservationsContainer,
+.tableContainer {
+  padding-top: 1em;
+}
+.reservationText,
+.tableText {
+  color: white;
+}
+
+.tableImage {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/bookatable.jpg") no-repeat center center;
+  background-size: 100%;
+}
