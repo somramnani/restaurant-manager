@@ -5,7 +5,7 @@ An application where managers can track their employees. Users can import there 
 Allows managers at restaurants to view their employees and reservations. 
 
 
-## Tools / Languages Used
+## Languages/Tools Used
 - HTML5
 - CSS3
 - Bootstrap
