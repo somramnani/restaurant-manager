@@ -1,7 +1,11 @@
-# RestaurantApp
+# Restaurant Manager
 An application where managers can track their employees. Users can import there name, hourly pay and job title.
 
-## Tools / Languages Used
+## Purpose
+Allows managers at restaurants to view their employees and reservations. 
+
+
+## Languages/Tools Used
 - HTML5
 - CSS3
 - Bootstrap
