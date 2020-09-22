@@ -8,19 +8,24 @@ html {
 }
 
 button.submit {
+  -webkit-box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
 }
+
 .backtoemployees {
+  -webkit-box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
 }
 
 form#cms {
   margin-top: 50px;
 }
+
 .addemployeesection {
   width: 800px;
   margin: 0 auto;
 }
+
 #cms textarea {
   resize: none;
 }
@@ -29,6 +34,7 @@ form#cms {
 button.edit {
   float: right;
   margin: 5px;
+  -webkit-box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
 }
 
@@ -47,17 +53,21 @@ button.edit {
   font-size: 4em;
   padding: 20px;
 }
+
 .icon-sections {
   font-size: 4em;
 }
 
 .buttonshadow {
+  -webkit-box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
 }
+
 ul#employeetracker-list li {
   display: inline;
   padding: 40px;
 }
+
 .employeetrackerheader {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -68,11 +78,13 @@ ul#employeetracker-list li {
   height: 100%;
   width: 100%;
 }
+
 .fullpage {
   display: block;
   height: 120%;
   width: 100%;
 }
+
 .step1text {
   padding-top: 20px;
 }
@@ -83,18 +95,22 @@ ul#employeetracker-list li {
   padding: 20px;
   border-radius: 10px;
 }
+
 .login-signup-box {
   color: white;
+  -webkit-transform: translate(-30em, 4em);
   transform: translate(-30em, 4em);
 }
 
 .information-container {
+  -webkit-transform: translateY(50%);
   transform: translateY(50%);
 }
 
 .employees-section {
   padding-top: 40px;
 }
+
 .reservation-section {
   padding-top: 40px;
   display: block;
@@ -111,10 +127,10 @@ ul#employeetracker-list li {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .parrallax2 {
   background-image: url("../images/top-restauraunt.jpg");
   height: 700px;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -128,14 +144,8 @@ ul#employeetracker-list li {
 
 .animated {
   -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -ms-animation-duration: 2s;
-  -o-animation-duration: 2s;
   animation-duration: 2s;
 }
 
@@ -148,13 +158,13 @@ ul#employeetracker-list li {
   width: 200px;
   position: fixed;
   z-index: 1;
-
   left: 0;
   /* background-color: #111; */
   background-color: #f5f5f5;
   overflow-x: hidden;
   padding-top: 20px;
 }
+
 .sidenav a {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
@@ -173,16 +183,22 @@ ul#employeetracker-list li {
   width: 300px;
   height: 200px;
   padding: 50px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .box-container {
   padding: 40px;
 }
+
 .box2 {
+  -webkit-transform: translateX(3em);
   transform: translateX(3em);
 }
+
 .box3 {
+  -webkit-transform: translateX(6em);
   transform: translateX(6em);
 }
 
@@ -191,10 +207,13 @@ ul#employeetracker-list li {
   background-color: #f5f5f5;
   width: 300px;
   height: 400px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .box5 {
+  -webkit-transform: translateX(6em);
   transform: translateX(6em);
 }
 
@@ -204,14 +223,23 @@ ul#employeetracker-list li {
 
 .employee-cards {
   margin: 5px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .card {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
+
 .blog-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -220,10 +248,19 @@ ul#employeetracker-list li {
 }
 
 .new-employee-button {
+  -webkit-box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
 }
 
 .reservationImage {
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.4)),
+      to(rgba(0, 0, 0, 0.4))
+    ),
+    url("../images/tables-reservation.jpg") no-repeat center center;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../images/tables-reservation.jpg") no-repeat center center;
   background-size: 100%;
@@ -233,13 +270,23 @@ ul#employeetracker-list li {
 .tableContainer {
   padding-top: 1em;
 }
+
 .reservationText,
 .tableText {
   color: white;
 }
 
 .tableImage {
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.3)),
+      to(rgba(0, 0, 0, 0.3))
+    ),
+    url("../images/bookatable.jpg") no-repeat center center;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../images/bookatable.jpg") no-repeat center center;
   background-size: 100%;
 }
+/*# sourceMappingURL=styles.css.map */
