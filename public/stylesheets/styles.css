@@ -140,7 +140,8 @@ ul#reservationstracker-list li {
   background-size: cover;
 }
 
-#step2section {
+#step2section,
+#reservationstep2section {
   display: none;
 }
 

@@ -29,10 +29,10 @@ $(document).ready(function () {
     $("#reservation--step2button").addClass(" btn-light");
     $("#reservation-step1button").addClass("btn-dark");
 
-    // $("#step1section").css("display", "block");
-    // $("#step2section").css("display", "none");
+    $("#reservation-step1section").css("display", "block");
+    $("#reservationstep2section").css("display", "none");
 
-    // $("#step1section").addClass("animated zoomIn");
+    $("#reservation-step1section").addClass("animated zoomIn");
   });
 
   $("#reservation--step2button").click(function () {
@@ -40,10 +40,10 @@ $(document).ready(function () {
     $("#reservation-step1button").addClass(" btn-light");
     $("#reservation--step2button").addClass("btn-dark");
 
-    // $("#step1section").css("display", "none");
-    // $("#step2section").css("display", "block");
+    $("#reservation-step1section").css("display", "none");
+    $("#reservationstep2section").css("display", "block");
 
-    // $("#step2section").addClass("animated zoomIn");
+    $("#reservationstep2section").addClass("animated zoomIn");
   });
 
   $("#signupbutton").click(function () {
