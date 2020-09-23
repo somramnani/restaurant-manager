@@ -63,12 +63,14 @@ button.edit {
   box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
 }
 
-ul#employeetracker-list li {
+ul#employeetracker-list li,
+ul#reservationstracker-list li {
   display: inline;
   padding: 40px;
 }
 
-.employeetrackerheader {
+.employeetrackerheader,
+.reservationstracker-list {
   padding-top: 20px;
   padding-bottom: 20px;
 }

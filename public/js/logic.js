@@ -1,8 +1,8 @@
 // ---------------------------------------------------------------------------
 //LOGIN PAGE
 // ---------------------------------------------------------------------------
-$(document).ready(function() {
-  $("#step1button").click(function() {
+$(document).ready(function () {
+  $("#step1button").click(function () {
     $("#step2button").removeClass(" btn-dark");
     $("#step2button").addClass(" btn-light");
     $("#step1button").addClass("btn-dark");
@@ -13,7 +13,7 @@ $(document).ready(function() {
     $("#step1section").addClass("animated zoomIn");
   });
 
-  $("#step2button").click(function() {
+  $("#step2button").click(function () {
     $("#step1button").removeClass(" btn-dark");
     $("#step1button").addClass(" btn-light");
     $("#step2button").addClass("btn-dark");
@@ -24,13 +24,35 @@ $(document).ready(function() {
     $("#step2section").addClass("animated zoomIn");
   });
 
-  $("#signupbutton").click(function() {
+  $("#reservation-step1button").click(function () {
+    $("#reservation--step2button").removeClass(" btn-dark");
+    $("#reservation--step2button").addClass(" btn-light");
+    $("#reservation-step1button").addClass("btn-dark");
+
+    // $("#step1section").css("display", "block");
+    // $("#step2section").css("display", "none");
+
+    // $("#step1section").addClass("animated zoomIn");
+  });
+
+  $("#reservation--step2button").click(function () {
+    $("#reservation-step1button").removeClass(" btn-dark");
+    $("#reservation-step1button").addClass(" btn-light");
+    $("#reservation--step2button").addClass("btn-dark");
+
+    // $("#step1section").css("display", "none");
+    // $("#step2section").css("display", "block");
+
+    // $("#step2section").addClass("animated zoomIn");
+  });
+
+  $("#signupbutton").click(function () {
     $(".panel").addClass("flipInY");
     $(".login-panel").css("display", "none");
     $(".signup-panel").css("display", "block");
   });
 
-  $("#back-to-login").click(function() {
+  $("#back-to-login").click(function () {
     $(".panel").addClass("flipInY");
     $(".login-panel").css("display", "block");
     $(".signup-panel").css("display", "none");
@@ -46,7 +68,7 @@ $(document).ready(function() {
 // ---------------------------------------------------------------------------
 // EMPLOYEE PAGE
 // ---------------------------------------------------------------------------
-$(document).ready(function() {
+$(document).ready(function () {
   // blogContainer holds all of our posts
   var blogContainer = $(".blog-container");
   var postCategorySelect = $("#category");
@@ -62,7 +84,7 @@ $(document).ready(function() {
     if (categoryString) {
       categoryString = "/category/" + categoryString;
     }
-    $.get("/api/posts" + categoryString, function(data) {
+    $.get("/api/posts" + categoryString, function (data) {
       console.log("Posts", data);
 
       posts = data;
@@ -78,8 +100,8 @@ $(document).ready(function() {
   function deletePost(id) {
     $.ajax({
       method: "DELETE",
-      url: "/api/posts/" + id
-    }).then(function() {
+      url: "/api/posts/" + id,
+    }).then(function () {
       getPosts(postCategorySelect.val());
     });
   }
@@ -139,19 +161,13 @@ $(document).ready(function() {
 
   // This function figures out which post to delete and then calls deletePost
   function handlePostDelete() {
-    var currentPost = $(this)
-      .parent()
-      .parent()
-      .data("post");
+    var currentPost = $(this).parent().parent().data("post");
     deletePost(currentPost.id);
   }
 
   // This function figures out which post to edit and takes it to the appropriate url
   function handlePostEdit() {
-    var currentPost = $(this)
-      .parent()
-      .parent()
-      .data("post");
+    var currentPost = $(this).parent().parent().data("post");
     window.location.href = "/cms?post_id=" + currentPost.id;
   }
 
@@ -177,7 +193,7 @@ $(document).ready(function() {
 // ---------------------------------------------------------------------------
 // CMS PAGE
 // ---------------------------------------------------------------------------
-$(document).ready(function() {
+$(document).ready(function () {
   var url = window.location.search;
   var postId;
   // Sets a flag for whether or not the post the post is updating
@@ -206,7 +222,7 @@ $(document).ready(function() {
     var newPost = {
       title: titleInput.val().trim(),
       body: bodyInput.val().trim(),
-      category: postCategorySelect.val()
+      category: postCategorySelect.val(),
     };
 
     console.log(newPost);
@@ -223,14 +239,14 @@ $(document).ready(function() {
 
   // Submits a new post and brings user to employees page upon completion
   function submitPost(Post) {
-    $.post("/api/posts/", Post, function() {
+    $.post("/api/posts/", Post, function () {
       window.location.href = "/employees";
     });
   }
 
   // Gets post data for a post if editing
   function getPostData(id) {
-    $.get("/api/posts/" + id, function(data) {
+    $.get("/api/posts/" + id, function (data) {
       if (data) {
         // If this post exists, prefill the cms forms with its data
         titleInput.val(data.title);
@@ -247,8 +263,8 @@ $(document).ready(function() {
     $.ajax({
       method: "PUT",
       url: "/api/posts",
-      data: post
-    }).then(function() {
+      data: post,
+    }).then(function () {
       window.location.href = "/employees";
     });
   }
@@ -266,8 +282,8 @@ var hostessCount = 0;
 
 $.ajax({
   url: "/api/posts/",
-  method: "GET"
-}).then(function(response) {
+  method: "GET",
+}).then(function (response) {
   for (let i = 0; i < response.length; i++) {
     var profession = response[i].category;
 
@@ -285,7 +301,7 @@ $.ajax({
 let openTables = 5;
 let closedTables = 0;
 
-$.ajax({ url: "/api/tables", method: "GET" }).then(function(tableData) {
+$.ajax({ url: "/api/tables", method: "GET" }).then(function (tableData) {
   // Loop through and display each of the customers
   for (var i = 0; i < tableData.length; i++) {
     closedTables = tableData.length;
@@ -294,7 +310,7 @@ $.ajax({ url: "/api/tables", method: "GET" }).then(function(tableData) {
   $("#numberoftables").text(openTables);
 });
 
-$.ajax({ url: "/api/waitlist", method: "GET" }).then(function(waitData) {
+$.ajax({ url: "/api/waitlist", method: "GET" }).then(function (waitData) {
   // Loop through and display each of the customers
   for (var i = 0; i < waitData.length; i++) {
     $("#numberofwaitlistedtables").text(waitData.length);
@@ -317,7 +333,7 @@ function drawTable() {
     ["Manager", { v: 22, f: "$21" }, { v: managerCount }],
     ["Cook", { v: 20, f: "$20" }, { v: cookCount }],
     ["Waiter/Waitress", { v: 10, f: "$10" }, { v: waiterCount }],
-    ["Host/Hostess", { v: 7000, f: "$11" }, { v: hostessCount }]
+    ["Host/Hostess", { v: 7000, f: "$11" }, { v: hostessCount }],
   ]);
 
   var table = new google.visualization.Table(
@@ -331,13 +347,13 @@ function drawChart() {
   var data = google.visualization.arrayToDataTable([
     ["Tables", "Number of tables"],
     ["Open Tables", openTables],
-    ["Closed Tables", closedTables]
+    ["Closed Tables", closedTables],
   ]);
 
   var options = {
     title: "Tables",
     backgroundColor: "#f5f5f5",
-    is3D: true
+    is3D: true,
   };
 
   var chart = new google.visualization.PieChart(
