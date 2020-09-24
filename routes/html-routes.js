@@ -68,5 +68,11 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/images/reservation-add.PNG"));
   });
 
+  app.get("/tablesreservationstep2", function (req, res) {
+    res.sendFile(
+      path.join(__dirname, "../public/images/reservations-table.PNG")
+    );
+  });
+
   // ---------------------------------------------------------------------------
 };
