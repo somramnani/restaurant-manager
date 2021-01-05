@@ -5,6 +5,7 @@ An application where managers can track their employees. Users can import there 
 - [ &#128161; Purpose](#-purpose)
 - [&#x1f527; Technologies & Tools](#-key-technology--tools)
 - [&#x1f4f2; Features](#-features)
+- [:framed_picture: Images](#framed_picture-images)
 
 
 ## &#128161; Purpose
@@ -29,6 +30,8 @@ Allows managers at restaurants to view their employees and reservations.
 ## &#x1f4f2; Features
 - Users can import their name, hourly pay and job title so managers can view their employeees
 - Allows managers to book a table so they can see if the restaurant has any open tables
+
+## :framed_picture: Images
 
 
   
