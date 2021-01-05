@@ -30,6 +30,7 @@ Allows managers at restaurants to view their employees and reservations.
 - Managers can: 
     - import their employees name, hourly pay and job title so they can view their employeees
     - book tables allowing them see if the restaurant has any open tables
+ - Displays charts depending on the data inputed of open tables and number of employees.
 
 
   
