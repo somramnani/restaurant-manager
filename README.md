@@ -37,6 +37,9 @@ Allows managers at restaurants to view their employees and reservations.
 ## :framed_picture: Images
 
 ![](public/images/homepage.jpg)
+
 ![](public/images/dashboard.jpg)
+
 ![](public/images/employees.jpg)
+
 ![](public/images/reservations.jpg)
