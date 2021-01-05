@@ -1,7 +1,7 @@
 # Restaurant Manager  :chart_with_downwards_trend:
 An application where managers can track their employees. Users can import there name, hourly pay and job title.
 
-## Table of contents
+## :clipboard: Table of contents
 - [ &#128161; Purpose](#-purpose)
 - [&#x1f527; Technologies & Tools](#-key-technology--tools)
 - [&#x1f4f2; Features](#-features)
@@ -28,8 +28,10 @@ Allows managers at restaurants to view their employees and reservations.
 - Heroku
 
 ## &#x1f4f2; Features
-- Users can import their name, hourly pay and job title so managers can view their employeees
-- Allows managers to book a table so they can see if the restaurant has any open tables
+- Managers can: 
+    - import their employees name, hourly pay and job title so they can view their employeees
+    - book tables allowing them see if the restaurant has any open tables
+ - Displays charts depending on the data inputed of open tables and number of employees.
 
 ## :framed_picture: Images
 
