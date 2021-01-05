@@ -27,6 +27,8 @@ Allows managers at restaurants to view their employees and reservations.
 - Heroku
 
 ## &#x1f4f2; Features
+- Users can import their name, hourly pay and job title so managers can view their employeees
+- Allows managers to book a table so they can see if the restaurant has any open tables
 
 
   
