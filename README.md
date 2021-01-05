@@ -3,7 +3,7 @@ An application where managers can track their employees. Users can import there 
 
 ## Table of contents
 - [ &#128161; Purpose](#-purpose)
-- [&#x1f527; Technologies & Tools](#-technology--tools)
+- [&#x1f527; Technologies & Tools](#-key-technology--tools)
 - [&#x1f4f2; Features](#-features)
 
 
